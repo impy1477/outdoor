@@ -27,6 +27,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
+    text-align: center;
 }
 .heading-primery{
     color: #fff;
@@ -60,6 +61,45 @@ body {
     top: 40px;
 }
 
+.btn:visited,
+.btn:link {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn.white {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(40, 180, 133, 1);
+    background-color: #fff;
+    font-size: 120%;
+    padding: 16.5px;
+    border-radius: 100px;
+    margin-top: 50px;
+    animation-name: moveinup;
+    animation-duration: 3s;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+
+
 /*
 ANIMATION FEATURES :
 
@@ -68,6 +108,24 @@ animation-delay: 3s;
 animationiteratioan-count: 3;
 backface-visibility: hidden;
 rotate: (180deg);
+animation-fill-mode: backwards;
+*/
+
+/*
+NOTES :
+
+1- z-index is using to put the white background behinde the button
+i think the defualt property is 1
+so we pick -1 to make sure that the white thing stay behind the button
+for this to work we set positon for parent relative and for the child absulote (SECTION 2 LAST VIDEO);
+
+2- to make things invisible we put opacity: 0;
+
+3- animation: animation-name animation-duratiaon animation-time-function animation-delay;
+
+4- for making animation-delay working correctly we set animation-fill-mode: backwards;
+
+
 */
 
 @keyframes moveindown{
@@ -101,4 +159,26 @@ rotate: (180deg);
     100% {
         opacity: 1;
     }
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.btn.white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scale(1.3, 1.5);
+    opacity: 0;
 }
