@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #808080;
+    padding: 16px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right,rgba(126, 213, 111, 0.3), rgba(40, 180, 133, 0.9)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% ); 
+}
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+.heading-primery{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+.heading-primery-main {
+    display: block;
+    font-weight: 400;
+    letter-spacing:36px;
+    font-size: 70px;
+    animation-name: moveindown;
+    animation-duration: 3s;
+}
+.heading-primery-sub {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 19px;
+    font-size: 22px;
+    animation-name: moveinup;
+    animation-duration: 3s;
+}
+.Logo {
+    height: 45px;
+    width: auto;
+}
+
+.Logo-box {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+/*
+ANIMATION FEATURES :
+
+animation time function; erase-in;
+animation-delay: 3s;
+animationiteratioan-count: 3;
+backface-visibility: hidden;
+rotate: (180deg);
+*/
+
+@keyframes moveindown{
+    0% {
+        opacity: 0;
+        transform: translateY(-110px);
+    }
+    
+    50% {
+        
+    }
+    
+    70% {
+        transform: translateY(2px);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes moveinup{
+    0% {
+        opacity: 0;
+        transform: translateY(110px);
+    }
+    
+    70% {
+        transform: translateY(-2px);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
