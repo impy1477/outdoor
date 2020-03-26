@@ -1,0 +1,30 @@
+.heading-primery{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    
+    &-main {
+    display: block;
+    font-weight: 400;
+    letter-spacing:36rem;
+    font-size: 70rem;
+    animation-name: moveindown;
+    animation-duration: 3s;
+    }
+    &-sub {
+        display: block;
+        font-weight: 400;
+        letter-spacing: 19rem;
+        font-size: 22rem;
+        animation-name: moveinup;
+        animation-duration: 3s;
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #808080;
+    padding: 16rem;
+}

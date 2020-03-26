@@ -1,0 +1,33 @@
+@keyframes moveindown{
+    0% {
+        opacity: 0;
+        transform: translateY(-110rem);
+    }
+    
+    50% {
+        
+    }
+    
+    70% {
+        transform: translateY(2rem);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes moveinup{
+    0% {
+        opacity: 0;
+        transform: translateY(110rem);
+    }
+    
+    70% {
+        transform: translateY(-2rem);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,48 @@
+@import  "abstracts/functions" ;
+@import  "abstracts/mixins"    ;
+@import  "abstracts/variables" ;
+
+@import  "base/animations"     ;
+@import  "base/base"           ;
+@import  "base/typography"     ;
+@import  "base/utilities"      ;
+
+@import  "components/button"   ;
+
+@import  "layout/header"       ;
+
+@import  "pages/home"          ;
+/*
+ANIMATION FEATURES :
+
+animation time function; erase-in;
+animation-delay: 3s;
+animationiteratioan-count: 3;
+backface-visibility: hidden;
+rotate: (180deg);
+animation-fill-mode: backwards;
+*/
+
+/*
+NOTES :
+
+1- z-index is using to put the white background behinde the button
+i think the defualt property is 1
+so we pick -1 to make sure that the white thing stay behind the button
+for this to work we set positon for parent relative and for the child absulote (SECTION 2 LAST VIDEO);
+
+2- to make things invisible we put opacity: 0;
+
+3- animation: animation-name animation-duratiaon animation-time-function animation-delay;
+
+4- for making animation-delay working correctly we set animation-fill-mode: backwards;
+
+5- clearfix {
+    content:'';
+    clear: both;
+    display: table;
+} we can use this as well :  className::after {
+                                            (clearfixVars)
+                                        }
+
+*/
