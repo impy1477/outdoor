@@ -54,6 +54,40 @@ body {
   color: #808080;
   padding: 16rem; }
 
+.heading-secondery {
+  font-size: 35rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2rem;
+  transition: all 0.3s; }
+  .heading-secondery:hover {
+    transform: skewX(10deg) skewY(2deg) scale(1.1);
+    text-shadow: 5rem 10rem 5rem rgba(0, 0, 0, 0.05); }
+
+.heading-tertiary {
+  font-size: 17rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 16rem;
+  margin-bottom: u-margin-bottom-small; }
+  .paragraph:last-child {
+    margin-bottom: 50rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 80rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 16rem; }
+
 .btn:visited, .btn:link {
   text-transform: uppercase;
   text-decoration: none;
@@ -102,6 +136,51 @@ body {
   z-index: -1;
   transition: 0.4s; }
 
+.button-small {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 14rem;
+  text-decoration: none;
+  transition: all .3s;
+  padding: 5rem;
+  margin-top: 15rem; }
+  .button-small:link, .button-small:visited {
+    color: #28b485;
+    border-bottom: 1px solid #7ed56f;
+    border-radius: 0; }
+  .button-small:hover, .button-small:active {
+    color: #fff;
+    background-color: #7ed56f; }
+  .button-small:hover {
+    transform: translateY(-3rem); }
+  .button-small:active {
+    transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 70%;
+    box-shadow: 0 15rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.3s; }
+    .composition__photo--p1 {
+      left: 15%;
+      top: 200rem; }
+    .composition__photo--p2 {
+      left: 0%;
+      top: 0rem; }
+    .composition__photo--p3 {
+      left: 65%;
+      top: 50rem; }
+    .composition__photo:hover {
+      transform: scale(1.15) translateY(-5rem);
+      box-shadow: 0 25rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to bottom right, rgba(40, 180, 133, 0.3), rgba(40, 180, 133, 0.9)), url(../img/hero.jpg);
@@ -126,6 +205,37 @@ body {
   position: absolute;
   left: 40rem;
   top: 40rem; }
+
+.row {
+  max-width: 1140rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 80rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 60rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 60rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2*60rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2*((100% - 2*60rem) / 3) + 60rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3*60rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2*((100% - 3*60rem) / 4) + 60rem); }
+  .row .col-3-of-4 {
+    width: calc( 3*((100% - 3*60rem) / 4) + 2 * 60rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 250rem 0;
+  margin-top: -20vh; }
 
 /*
 ANIMATION FEATURES :
@@ -158,5 +268,22 @@ for this to work we set positon for parent relative and for the child absulote (
 } we can use this as well :  className::after {
                                             (clearfixVars)
                                         }
+6- to center block elements inside anotehr block elements we set margin: 0 auto (used in laypout/grid) ;
+
+7- width: calc((100% - 60rem) / 2);
+
+8- making text gradiant {
+
+    background-image:Linear-gradiant();
+    -webkit-background-clip: text; => this will put the back ground (what ever it is ) just for the value it gets
+    and rest aof a background is parent element background;
+    color: transparent; => make the text color to what is behind it;
+
+}
+
+9- (ugly section2 picture borders) outline: 1.5rem solid $color-primery;
+                                   outline-offset: 2rem;
+
+10-
 
 */

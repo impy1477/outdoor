@@ -28,3 +28,78 @@ body {
     color: #808080;
     padding: 16rem;
 }
+
+.heading-secondery {
+    font-size: 35rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2rem;
+    transition: all 0.3s;
+    
+    &:hover {
+        transform: skewX(10deg) skewY(2deg) scale(1.1);
+        text-shadow: 5rem 10rem 5rem rgba($color-black, 0.05);
+    }
+    
+}
+
+.heading-tertiary {
+    font-size: 17rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 16rem;
+    margin-bottom: u-margin-bottom-small;
+    
+    &:last-child {
+        margin-bottom: 50rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

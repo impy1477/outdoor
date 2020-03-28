@@ -1,17 +1,20 @@
-@import  "abstracts/functions" ;
-@import  "abstracts/mixins"    ;
-@import  "abstracts/variables" ;
+@import  "abstracts/functions"     ;
+@import  "abstracts/mixins"        ;
+@import  "abstracts/variables"     ;
 
-@import  "base/animations"     ;
-@import  "base/base"           ;
-@import  "base/typography"     ;
-@import  "base/utilities"      ;
+@import  "base/animations"         ;
+@import  "base/base"               ;
+@import  "base/typography"         ;
+@import  "base/utilities"          ;
 
-@import  "components/button"   ;
+@import  "components/button"       ;
+@import  "components/button-small" ;
+@import  "components/composition"  ;
 
-@import  "layout/header"       ;
+@import  "layout/header"           ;
+@import  "layout/grid"             ;
 
-@import  "pages/home"          ;
+@import  "pages/home"              ;
 /*
 ANIMATION FEATURES :
 
@@ -44,5 +47,22 @@ for this to work we set positon for parent relative and for the child absulote (
 } we can use this as well :  className::after {
                                             (clearfixVars)
                                         }
+6- to center block elements inside anotehr block elements we set margin: 0 auto (used in laypout/grid) ;
+
+7- width: calc((100% - #{$gutter-horizental}) / 2);
+
+8- making text gradiant {
+
+    background-image:Linear-gradiant();
+    -webkit-background-clip: text; => this will put the back ground (what ever it is ) just for the value it gets
+    and rest aof a background is parent element background;
+    color: transparent; => make the text color to what is behind it;
+
+}
+
+9- (ugly section2 picture borders) outline: 1.5rem solid $color-primery;
+                                   outline-offset: 2rem;
+
+10-
 
 */
