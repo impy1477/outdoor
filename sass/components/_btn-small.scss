@@ -1,0 +1,19 @@
+.button-small {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 14rem;
+  text-decoration: none;
+  transition: all .3s;
+  padding: 5rem;
+  margin-top: 15rem; }
+  .button-small:link, .button-small:visited {
+    color: #28b485;
+    border-bottom: 1px solid #7ed56f;
+    border-radius: 0; }
+  .button-small:hover, .button-small:active {
+    color: #fff;
+    background-color: #7ed56f; }
+  .button-small:hover {
+    transform: translateY(-3rem); }
+  .button-small:active {
+    transform: translateY(0); }
