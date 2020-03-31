@@ -209,6 +209,43 @@ body {
   .feature-box:hover {
     transform: scale(1.1) translateY(-30rem); }
 
+.card {
+  perspective: 800rem;
+  -moz-perspective: 800rem;
+  position: relative;
+  height: 500rem;
+  width: 100%;
+  transition: all 1.4s ease; }
+  .card__side {
+    font-size: 16rem;
+    color: white;
+    height: 500rem;
+    transition: all 1.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.17);
+    border-radius: 20px 20px 5px 5px; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(-180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover {
+    transform: scale(1.15);
+    transition: all 1.4s ease; }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to bottom right, rgba(40, 180, 133, 0.3), rgba(40, 180, 133, 0.9)), url(../img/hero.jpg);
@@ -270,9 +307,14 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -100rem; }
+  margin-top: -110rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 300rem 0;
+  margin-top: -111rem; }
 
 /*
 ANIMATION FEATURES :
