@@ -4,12 +4,10 @@
     position: relative;
     height: 500rem;
     width: 100%;
-    transition: all 1.4s ease;
+    transition: all 1.2s ease;
     &__side {
-        font-size: 16rem;
-        color: white;
         height: 500rem;
-        transition: all 1.4s ease;
+        transition: all 1.2s ease;
         position: absolute;
         top: 0;
         left: 0;
@@ -17,6 +15,7 @@
         backface-visibility: hidden;
         box-shadow: 0 15px 40px rgba($color-black, 0.17);
         border-radius: 20px 20px 5px 5px;
+        overflow: hidden;
         
         &--front {
            background-color: $color-white;
@@ -25,6 +24,16 @@
         
         &--back {
             transform: rotateY(-180deg);
+            
+            & p {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 16rem;
+                color: $color-white;
+                margin: 0 auto;
+            }
             
             &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
@@ -37,11 +46,29 @@
             &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
+            
+            &--price {
+                position: absolute;
+                top: 500% !important;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 50rem;
+                color: $color-white;
+                font-weight: 100;
+            }
+        }
+        
+        & a {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
         }
     }
     &:hover {
         transform: scale(1.15);
-        transition: all 1.4s ease;
+        transition: all 1.2s ease;
     }
     
     &:hover &__side{
@@ -53,4 +80,106 @@
             
         }
     }
+    
+    &__picture {
+        
+        background-size: cover;
+        height: 250rem;
+        background-blend-mode: overlay;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        
+        &-1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+            
+        }
+        
+        &-2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+        }
+        
+        &-3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+        }
+        
+    }
+    &__heading {
+        font-size: 26rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 120rem;
+        right: 25rem;
+        text-align: right;
+        width: 50%;
+        //padding: 5rem;
+    }
+    
+    &__heading_span {
+        padding: 8rem 10rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        &-1 {
+            background-image: linear-gradient(to right, rgba($color-secondary-light, 0.9), rgba($color-secondary-dark, 0.9));
+        }
+        &-2 {
+            background-image: linear-gradient(to right, rgba($color-primary-light, 0.9), rgba($color-primary-dark, 0.9));
+        }
+        &-3 {
+            background-image: linear-gradient(to right, rgba($color-tertiary-light, 0.9), rgba($color-tertiary-dark, 0.9));
+        }
+    }
+    
+    &__details {
+        padding: 25rem;
+        
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: -20rem;
+            li {
+                text-align: center;
+                font-size: 15rem;
+                padding: 10rem;
+                &:not(:last-child) {
+                border-bottom: 1rem solid rgba($color-black, 0.1);
+                }
+            }
+            
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

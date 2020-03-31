@@ -12,6 +12,7 @@
 @import  "components/composition"  ;
 @import  "components/feature-box"  ;
 @import  "components/card"         ;
+@import  "components/btn-simple"   ;
 
 @import  "layout/header"           ;
 @import  "layout/grid"             ;
@@ -65,7 +66,18 @@ for this to work we set positon for parent relative and for the child absulote (
 9- (ugly section2 picture borders) outline: 1.5rem solid $color-primery;
                                    outline-offset: 2rem;
 
-10-
+10- for making any new section we use padding in some cases we can use height and width;
+
+11- great box shadow box-shadow: 0 15px 40px rgba($color-black, 0.17);
+
+12- if we are going to use background images insted of images we set HTML to &nbsp (Space);
+
+13- if after putting a backgroundimages the border radius sis not work we use overflow: hidden;
+
+14- box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+15- we can use row class without and colums(section-stories);
 
 */
 

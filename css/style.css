@@ -215,36 +215,111 @@ body {
   position: relative;
   height: 500rem;
   width: 100%;
-  transition: all 1.4s ease; }
+  transition: all 1.2s ease; }
   .card__side {
-    font-size: 16rem;
-    color: white;
     height: 500rem;
-    transition: all 1.4s ease;
+    transition: all 1.2s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.17);
-    border-radius: 20px 20px 5px 5px; }
+    border-radius: 20px 20px 5px 5px;
+    overflow: hidden; }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
       transform: rotateY(-180deg); }
+      .card__side--back p {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16rem;
+        color: #fff;
+        margin: 0 auto; }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card__side--back--price {
+        position: absolute;
+        top: 500% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50rem;
+        color: #fff;
+        font-weight: 100; }
+    .card__side a {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .card:hover {
     transform: scale(1.15);
-    transition: all 1.4s ease; }
+    transition: all 1.2s ease; }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 250rem;
+    background-blend-mode: overlay;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .card__picture-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+    .card__picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 26rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 120rem;
+    right: 25rem;
+    text-align: right;
+    width: 50%; }
+  .card__heading_span {
+    padding: 8rem 10rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading_span-1 {
+      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.9), rgba(255, 119, 48, 0.9)); }
+    .card__heading_span-2 {
+      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)); }
+    .card__heading_span-3 {
+      background-image: linear-gradient(to right, rgba(41, 152, 255, 0.9), rgba(86, 67, 250, 0.9)); }
+  .card__details {
+    padding: 25rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: -20rem; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 15rem;
+        padding: 10rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1rem solid rgba(0, 0, 0, 0.1); }
+
+.btn-simple {
+  padding: 19rem;
+  background-color: #f2f2f2;
+  color: #434343;
+  display: block;
+  font-size: 14rem;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase; }
 
 .header {
   height: 95vh;
@@ -363,6 +438,17 @@ for this to work we set positon for parent relative and for the child absulote (
 9- (ugly section2 picture borders) outline: 1.5rem solid $color-primery;
                                    outline-offset: 2rem;
 
-10-
+10- for making any new section we use padding in some cases we can use height and width;
+
+11- great box shadow box-shadow: 0 15px 40px rgba($color-black, 0.17);
+
+12- if we are going to use background images insted of images we set HTML to &nbsp (Space);
+
+13- if after putting a backgroundimages the border radius sis not work we use overflow: hidden;
+
+14- box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+15- we can use row class without and colums(section-stories);
 
 */
