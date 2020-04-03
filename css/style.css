@@ -88,6 +88,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 16rem; }
 
+.u-margin-top-storySection {
+  margin-top: -200rem; }
+
 .btn:visited, .btn:link {
   text-transform: uppercase;
   text-decoration: none;
@@ -135,6 +138,51 @@ body {
   left: 0;
   z-index: -1;
   transition: 0.4s; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 60rem;
+  padding-left: 90rem;
+  box-shadow: 50rem 50rem 50rem rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  font-size: 16rem;
+  transform: skewX(-10deg);
+  transition: all 0.5s; }
+  .story > * {
+    transform: skewX(10deg); }
+  .story__caption {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, 50%);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translate(-35rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+  .story__shape {
+    width: 150rem;
+    height: 150rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-30rem) skewX(10deg);
+    position: relative; }
+  .story__img {
+    width: auto;
+    height: 100%;
+    transform: translate(-35rem) scale(1.4);
+    transition: all 0.5s; }
 
 .button-small {
   text-transform: capitalize;
@@ -311,6 +359,20 @@ body {
         .card__details ul li:not(:last-child) {
           border-bottom: 1rem solid rgba(0, 0, 0, 0.1); }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn-simple {
   padding: 19rem;
   background-color: #f2f2f2;
@@ -388,8 +450,12 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 300rem 0;
+  padding: 200rem 0 50rem 0;
   margin-top: -111rem; }
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0; }
 
 /*
 ANIMATION FEATURES :
@@ -450,5 +516,21 @@ for this to work we set positon for parent relative and for the child absulote (
         -webkit-box-decoration-break: clone;
 
 15- we can use row class without and colums(section-stories);
+
+16- box shadow = X Y blur rgba(black, opacity);
+
+17- figure for putting a image near a caption like story section;
+
+18- section story shape-outside: circle(size "at" centerX centerY) the class haavveee to got width, height, float and it has to got webkit prefix
+the shape outside only say how to text and other elemetnts float around it for making the thing a real circle we use clip-path: circle(50% at 50% 50%)
+again the prefix is needed;
+
+19-if somtimes animation shoked we set backfacevisibility to hidden;
+
+20- site https://coverr.co/ for free videos;
+
+21- when somthing overflows like bg-video we use overflow: hidden;
+
+
 
 */

@@ -8,10 +8,12 @@
 @import  "base/utilities"          ;
 
 @import  "components/button"       ;
+@import  "components/story"        ;
 @import  "components/btn-small"    ;
 @import  "components/composition"  ;
 @import  "components/feature-box"  ;
 @import  "components/card"         ;
+@import  "components/bg-video"     ;    ;
 @import  "components/btn-simple"   ;
 
 @import  "layout/header"           ;
@@ -78,6 +80,22 @@ for this to work we set positon for parent relative and for the child absulote (
         -webkit-box-decoration-break: clone;
 
 15- we can use row class without and colums(section-stories);
+
+16- box shadow = X Y blur rgba(black, opacity);
+
+17- figure for putting a image near a caption like story section;
+
+18- section story shape-outside: circle(size "at" centerX centerY) the class haavveee to got width, height, float and it has to got webkit prefix
+the shape outside only say how to text and other elemetnts float around it for making the thing a real circle we use clip-path: circle(50% at 50% 50%)
+again the prefix is needed;
+
+19-if somtimes animation shoked we set backfacevisibility to hidden;
+
+20- site https://coverr.co/ for free videos;
+
+21- when somthing overflows like bg-video we use overflow: hidden;
+
+
 
 */
 
