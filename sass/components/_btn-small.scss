@@ -5,8 +5,11 @@
   text-decoration: none;
   transition: all .3s;
   padding: 5rem;
-  margin-top: 15rem; }
-  .button-small:link, .button-small:visited {
+  margin-top: 15rem;
+cursor: pointer;
+border: none;
+}
+  .button-small:link, .button-small:visited ,.button-small {
     color: #28b485;
     border-bottom: 1px solid #7ed56f;
     border-radius: 0; }

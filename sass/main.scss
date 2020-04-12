@@ -13,7 +13,8 @@
 @import  "components/composition"  ;
 @import  "components/feature-box"  ;
 @import  "components/card"         ;
-@import  "components/bg-video"     ;    ;
+@import  "components/form"         ;
+@import  "components/bg-video"     ;
 @import  "components/btn-simple"   ;
 
 @import  "layout/header"           ;
@@ -95,6 +96,10 @@ again the prefix is needed;
 
 21- when somthing overflows like bg-video we use overflow: hidden;
 
+22- backgroundsize cover and 100% are the same... if we put more than 100 the picture get zoom in and if we put less the picture multiplays;
+
+23-selecting sibilings elemnts (elements that are both child of a same parent) with ~ in general or + if it is the first child of a element and some psudo classes
+that we see in form.scss like placeholder-shown etc.;
 
 
 */
