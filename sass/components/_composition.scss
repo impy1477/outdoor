@@ -10,14 +10,14 @@
     z-index: 10;
     transition: all 0.3s; }
     .composition__photo--p1 {
-      left: 15%;
-      top: 200%; }
+      left: 0rem;
+      top: 0rem; }
     .composition__photo--p2 {
-      left: 0%;
-      top: 0%; }
+      left: 322rem;
+      top: 30rem; }
     .composition__photo--p3 {
-      left: 65%;
-      top: 50%; }
+      left: 75rem;
+      top: 170rem; }
     .composition__photo:hover {
       transform: scale(1.15) translateY(-5rem);
       box-shadow: 0 25rem 4rem rgba(0, 0, 0, 0.5);
